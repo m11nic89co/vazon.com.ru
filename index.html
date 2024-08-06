@@ -6,11 +6,18 @@
     <title>Page with Menu, Carousel, Centered Text, Features, and Footer</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .menu-bar {
+            margin-bottom: 0; /* Убираем отступ снизу у меню */
+        }
+        .carousel {
+            margin-top: 0; /* Убираем отступ сверху у карусели */
+        }
+        .carousel-item img {
+            width: 100%; /* Ширина изображения на 100% */
+            height: auto; /* Высота автоматически подстраивается */
+        }
         .full-height {
             height: 100vh; /* Высота экрана */
-        }
-        .menu-bar {
-            margin-bottom: 20px; /* Отступ снизу для меню */
         }
         .footer {
             background-color: #f8f9fa; /* Цвет фона футера */
@@ -22,10 +29,6 @@
         }
         .feature-card {
             text-align: center; /* Центрирование текста в карточках */
-        }
-        .carousel-item img {
-            width: 100%; /* Ширина изображения на 100% */
-            height: auto; /* Высота автоматически подстраивается */
         }
     </style>
 </head>
@@ -55,7 +58,7 @@
     </nav>
 
     <!-- Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
