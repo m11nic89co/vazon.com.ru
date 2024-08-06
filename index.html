@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page with Menu, Carousel, Centered Text, and Footer</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Page with Menu, Carousel, Centered Text, Features, and Footer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .full-height {
             height: 100vh; /* Высота экрана */
@@ -17,19 +17,29 @@
             padding: 20px 0; /* Отступы футера */
             text-align: center; /* Выравнивание текста по центру */
         }
+        .features-section {
+            padding: 40px 0; /* Отступы для секции преимуществ */
+        }
+        .feature-card {
+            text-align: center; /* Центрирование текста в карточках */
+        }
+        .carousel-item img {
+            width: 100%; /* Ширина изображения на 100% */
+            height: auto; /* Высота автоматически подстраивается */
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light menu-bar">
         <a class="navbar-brand" href="#">MySite</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
@@ -47,9 +57,9 @@
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -62,14 +72,45 @@
                 <img class="d-block w-100" src="https://via.placeholder.com/1200x500?text=Third+Slide" alt="Third slide">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container features-section">
+        <h2 class="text-center mb-4">Преимущества нашего товара</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Преимущество 1</h5>
+                        <p class="card-text">Описание преимущества 1. Почему это важно для вас?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Преимущество 2</h5>
+                        <p class="card-text">Описание преимущества 2. Почему это важно для вас?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Преимущество 3</h5>
+                        <p class="card-text">Описание преимущества 3. Почему это важно для вас?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Centered Text -->
@@ -77,44 +118,12 @@
         <h1>Центрированный текст</h1>
     </div>
 
-	 <!-- Features Section -->
-    <div class="container features-section">
-		<h2 class="text-center mb-4">Преимущества нашего товара</h2>
-		<div class="row">
-			 <div class="col-md-4">
-				  <div class="card feature-card">
-						<div class="card-body">
-							 <h5 class="card-title">Преимущество 1</h5>
-							 <p class="card-text">Описание преимущества 1. Почему это важно для вас?</p>
-						</div>
-				  </div>
-			 </div>
-			 <div class="col-md-4">
-				  <div class="card feature-card">
-						<div class="card-body">
-							 <h5 class="card-title">Преимущество 2</h5>
-							 <p class="card-text">Описание преимущества 2. Почему это важно для вас?</p>
-						</div>
-				  </div>
-			 </div>
-			 <div class="col-md-4">
-				  <div class="card feature-card">
-						<div class="card-body">
-							 <h5 class="card-title">Преимущество 3</h5>
-							 <p class="card-text">Описание преимущества 3. Почему это важно для вас?</p>
-						</div>
-				  </div>
-			 </div>
-		</div>
-  </div>
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 MySite. All rights reserved.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
