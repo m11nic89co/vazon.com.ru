@@ -77,6 +77,12 @@
 			margin-bottom: 2rem;
 		}
 
+		.imgColor img {
+			max-width: 100%;
+			height: auto;
+			width: -webkit-fill-available;
+		}
+
 		.btn {
 			display: inline-flex;
 			align-items: center;
@@ -196,6 +202,14 @@
 
 			.gboard {
 				padding: 5rem 1rem 5rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.hero-section {
+				background-attachment: scroll;
+				background-position: center center;
+				background-size: cover;
 			}
 		}
 	</style>
