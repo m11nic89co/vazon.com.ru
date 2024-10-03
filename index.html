@@ -169,13 +169,13 @@
 		.footer,
 		.navbar {
 			background-color: rgba(52, 58, 64, 0.539);
-			color: white;
+			/* color: rgb(133, 3, 3); */
 		}
 
 		.footer {
 			padding: 1rem 0;
 			text-align: center;
-			color: #666;
+			/* color: #ffffff; */
 		}
 
 		.contact-buttons {
@@ -241,6 +241,24 @@
 			text-shadow: 0px 0px 20px black;
 		}
 
+		.info-banner {
+			/* background-color: #ffef1300;
+    color: #fffb00; */
+			font-size: 1rem;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			/* Выше чем навбар */
+		}
+
+		.navbar {
+			margin-top: 22px;
+			/* Отступ вниз для навбара, чтобы не перекрывалось */
+		}
+
+
 		@media (max-width: 768px) {
 			.contact-buttons {
 				flex-direction: row;
@@ -280,6 +298,11 @@
 
 <body>
 	<header>
+		<!-- Информационное сообщение -->
+		<div class="info-banner text-center">
+			<p style="background-color: #fffb00; color: #ff0000;"><b>ПРОМО-ЦЕНА только до 31.10.2024</b></p>
+		</div>
+		<!-- Меню -->
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 			<div class="container-fluid">
 				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -422,7 +445,7 @@
 					</a>
 				</p>
 				<div class="contact-buttons">
-					<a href="https://t.me/yourusername" target="_blank" class="contact-button" aria-label="Telegram">
+					<a href="https://t.me/+79637799905" target="_blank" class="contact-button" aria-label="Telegram">
 						<i class="fab fa-telegram-plane"></i>
 					</a>
 					<a href="https://wa.me/79637799905" target="_blank" class="contact-button" aria-label="WhatsApp">
@@ -441,8 +464,8 @@
 	</main>
 
 	<footer class="footer">
-		<p style="margin-bottom: 0px;">&copy; 2024. ООО "Ёдекор". Все права защищены.<br>
-			<span><a href="https://edecorus.ru" style="color: #666;">www.edecorus.ru</a></span>
+		<p style="margin-bottom: 0px; color: #ffffff;">&copy; 2024. ООО "Ёдекор". Все права защищены.<br>
+			<span><a href="https://edecorus.ru" style="color: #ffffff;">www.edecorus.ru</a></span>
 		</p>
 	</footer>
 
